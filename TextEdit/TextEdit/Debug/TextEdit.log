@@ -1,0 +1,23 @@
+﻿  TextEdit.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(21,1): warning C4005: RT_MANIFEST: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(282): message : см. предыдущее определение "RT_MANIFEST"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(22,1): warning C4005: CREATEPROCESS_MANIFEST_RESOURCE_ID: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(283): message : см. предыдущее определение "CREATEPROCESS_MANIFEST_RESOURCE_ID"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(23,1): warning C4005: ISOLATIONAWARE_MANIFEST_RESOURCE_ID: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(284): message : см. предыдущее определение "ISOLATIONAWARE_MANIFEST_RESOURCE_ID"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(24,1): warning C4005: ISOLATIONAWARE_NOSTATICIMPORT_MANIFEST_RESOURCE_ID: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(285): message : см. предыдущее определение "ISOLATIONAWARE_NOSTATICIMPORT_MANIFEST_RESOURCE_ID"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(25,1): warning C4005: ISOLATIONPOLICY_MANIFEST_RESOURCE_ID: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(286): message : см. предыдущее определение "ISOLATIONPOLICY_MANIFEST_RESOURCE_ID"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(26,1): warning C4005: ISOLATIONPOLICY_BROWSER_MANIFEST_RESOURCE_ID: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(287): message : см. предыдущее определение "ISOLATIONPOLICY_BROWSER_MANIFEST_RESOURCE_ID"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(27,1): warning C4005: MINIMUM_RESERVED_MANIFEST_RESOURCE_ID: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(288): message : см. предыдущее определение "MINIMUM_RESERVED_MANIFEST_RESOURCE_ID"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(28,1): warning C4005: MAXIMUM_RESERVED_MANIFEST_RESOURCE_ID: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(289): message : см. предыдущее определение "MAXIMUM_RESERVED_MANIFEST_RESOURCE_ID"
+C:\Users\Максим\source\repos\TextEdit\TextEdit\TextEdit.cpp(11,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+C:\Users\Максим\source\repos\TextEdit\TextEdit\TextEdit.cpp : message : см. предыдущее определение "_CRT_SECURE_NO_WARNINGS"
+TextEdit.obj : error LNK2019: ссылка на неразрешенный внешний символ "unsigned long __stdcall SaveCallback(unsigned long,unsigned char *,long,long *)" (?SaveCallback@@YGKKPAEJPAJ@Z) в функции "void __cdecl FileSaveAs(struct HWND__ *)" (?FileSaveAs@@YAXPAUHWND__@@@Z).
+    Указание на символы, которые определены и могут подойти:
+      "unsigned long __stdcall SaveCallback(unsigned long,char const *,long,long *)" (?SaveCallback@@YGKKPBDJPAJ@Z)
+C:\Users\Максим\source\repos\TextEdit\Debug\TextEdit.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
