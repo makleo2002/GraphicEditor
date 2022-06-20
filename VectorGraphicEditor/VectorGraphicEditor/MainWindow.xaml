@@ -1,0 +1,105 @@
+﻿<Window x:Class="VectorGraphicEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VectorGraphicEditor"
+        mc:Ignorable="d"
+        
+        Title="MainWindow" Height="600" Width="800">
+    <Grid  Margin="0,0,0,-6">
+
+        <ToolBar Width="800" Height="44"  Margin="0,16,0,0" VerticalAlignment="Top"  HorizontalAlignment="Center">
+
+            <Button Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Width="30" Height="30" Background="White" Click="Button_Click"/>
+            <Button Content="" VerticalAlignment="Top" Width="30" Height="30" Background="Black" Click="Button_Click"/>
+            <Button Content="" VerticalAlignment="Top" Width="30" Height="30" Background="Red" Click="Button_Click"/>
+            <Button Content="" VerticalAlignment="Top" Width="30" Height="30" Background="#FF0FFF00" HorizontalAlignment="Left" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.955"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.25"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Content="" VerticalAlignment="Top" Width="30" Height="30" Background="#FF0003FF" Click="Button_Click"/>
+            <Button Content="" VerticalAlignment="Top" Width="30" Height="30" Background="#FFF400FF" Click="Button_Click"/>
+            <Button Content="" VerticalAlignment="Top" Width="30" Height="30" Background="#FF00FAFF" Click="Button_Click"/>
+            <Button Content="" VerticalAlignment="Top" Width="30" Height="30" Background="#FFFFE500" Click="Button_Click"/>
+            <Button Content="" VerticalAlignment="Top" Width="30" Height="30" Background="#FFFF6E00" Click="Button_Click"/>
+            <Slider x:Name="slider" Width="245" Height="29" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#00000000" Foreground="#FFF0F0F0" ValueChanged="Slider_ValueChanged"/>
+            <Button x:Name="undo" Content="" VerticalAlignment="Top" Click="undo_Click_" Width="40" Height="40">
+                <Button.Background>
+                    <ImageBrush ImageSource="/undo.png"/>
+                </Button.Background>
+            </Button>
+            <Button Content="" Click="SaveFile" Height="40" Width="41">
+                <Button.Background>
+                    <ImageBrush ImageSource="/save.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Content="" VerticalAlignment="Top" Click="NewFile" Width="40" Height="40">
+                <Button.Background>
+                    <ImageBrush ImageSource="/clear1.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="pencil1" Content="" Click="Pencil_Click_" Width="40" Height="40">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pen.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="bucket1" Content="" Click="bucket_Click" Width="40" Height="40">
+                <Button.Background>
+                    <ImageBrush ImageSource="/bucket2.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="eraser1" Content="" Click="eraser_Click" Width="40" Height="40">
+                <Button.Background>
+                    <ImageBrush ImageSource="/wp7745491.png"/>
+                </Button.Background>
+            </Button>
+
+
+        </ToolBar>
+
+        <Canvas x:Name="paintSurface" Width="{Binding ElementName=root, Path=ActualWidth}" Height="{Binding ElementName=root, Path=ActualHeight}" ClipToBounds="True"  MouseDown="paintSurface_MouseDown" MouseMove="paintSurface_MouseMove" MouseUp="paintSurface_MouseUp" Margin="0,106,0,0">
+          
+        </Canvas>
+
+        <Menu Width="{Binding ElementName=root, Path=ActualWidth}" Height="{Binding ElementName=root, Path=ActualHeight}" VerticalAlignment="Top" >
+            <MenuItem Header="File" HorizontalAlignment="Left">
+                <MenuItem Header="New File" Click="NewFile" HorizontalAlignment="Left"/>
+                <MenuItem Header="Open File" Click="OpenFile"/>
+                <MenuItem Header="Save File" Click="SaveFile"/>
+                <MenuItem Header="Exit" Click="Exit"></MenuItem>
+
+            </MenuItem>
+            <MenuItem Header="About Program" ></MenuItem>
+        </Menu>
+        <ToolBar Width="{Binding ElementName=root, Path=ActualWidth}" Height="{Binding ElementName=root, Path=ActualHeight}"  Margin="0,58,0,0" VerticalAlignment="Top"  HorizontalAlignment="Center"  Background="#FDEEF5FD">
+            <Button x:Name="line1" Content="" Click="line_Click" Width="40" Height="40" VerticalAlignment="Top">
+                <Button.Background>
+                    <ImageBrush ImageSource="/line.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="circle1" Content="" Click="circle_Click" Width="40" Height="40" VerticalAlignment="Top">
+                <Button.Background>
+                    <ImageBrush ImageSource="/circle.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="rectangle1" Content="" Click="rectangle_Click" Width="40" Height="40" VerticalAlignment="Top">
+                <Button.Background>
+                    <ImageBrush ImageSource="/rectangle.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="triangle1" Content="" Click="triangle1_Click" Width="40" Height="40">
+                <Button.Background>
+                    <ImageBrush ImageSource="/triangle.png"/>
+                </Button.Background>
+            </Button>
+
+        </ToolBar>
+    </Grid>
+</Window>
